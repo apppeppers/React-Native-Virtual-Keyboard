@@ -10,8 +10,7 @@ import {
   Animated,
   TouchableOpacity,
   TouchableHighlight,
-  InteractionManager,
-  StatusBar
+  InteractionManager
 } from "react-native";
 
 import styles from "./VirtualKeyboard.style";
@@ -63,6 +62,10 @@ class VirtualKeyboard extends Component {
     });
   }
 
+  componentWillUnmount() {
+    this.setModalVisible(false);
+  }
+
   onPressOpen() {
     this.setModalVisible(true);
   }
@@ -84,7 +87,8 @@ class VirtualKeyboard extends Component {
   }
 
   setModalVisible(visible) {
-    const { height, duration } = this.props;
+    const { height, duration, value } = this.props;
+    this.setState({ text: value });
 
     // slide animation
     if (visible) {
