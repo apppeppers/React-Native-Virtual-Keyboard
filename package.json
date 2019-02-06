@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/nshaposhnik/React-Native-Virtual-Keyboard/issues"
   },
-  "homepage": "https://github.com/nshaposhnik/React-Native-Virtual-Keyboard#readme"
+  "homepage": "https://github.com/nshaposhnik/React-Native-Virtual-Keyboard#readme",
+  "dependencies": {
+    "react-native-virtual-keyboard": "https://github.com/apppeppers/React-Native-Virtual-Keyboard.git"
+  }
 }
