@@ -39,7 +39,7 @@ class VirtualKeyboard extends Component {
     backspaceImg: require("./backspace.png"),
     applyBackspaceTint: true,
     decimal: false,
-    height: 224,
+    height: 245,
     duration: 300
   };
 
@@ -84,6 +84,11 @@ class VirtualKeyboard extends Component {
     if (typeof this.props.onCloseModal === "function") {
       this.props.onCloseModal();
     }
+  }
+
+  onPressChooseCategory() {
+    this.setModalVisible(false);
+    this.props.onPressChooseCategory();
   }
 
   setModalVisible(visible) {
@@ -177,6 +182,17 @@ class VirtualKeyboard extends Component {
                         this.state.allowPointerEvents ? "auto" : "none"
                       }
                     >
+                      <View style={styles.headerContainer}>
+                        <Text style={styles.label}>AMOUNT</Text>
+                        <TouchableOpacity
+                          onPress={() => this.onPressChooseCategory()}
+                          activeOpacity={0.8}
+                        >
+                          <Text style={[styles.label, styles.button]}>
+                            CHOOSE CATEGORY
+                          </Text>
+                        </TouchableOpacity>
+                      </View>
                       {this.Row([1, 2, 3])}
                       {this.Row([4, 5, 6])}
                       {this.Row([7, 8, 9])}

@@ -51,6 +51,14 @@ module.exports = StyleSheet.create({
     zIndex: 1
   },
   inputWrapper: {},
+  headerContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingHorizontal: 8,
+    paddingBottom: 12
+  },
+  label: { fontSize: 12, color: "#a0a5ab" },
+  button: { color: "#686d75" },
   mask: {
     flex: 1,
     zIndex: 8,
