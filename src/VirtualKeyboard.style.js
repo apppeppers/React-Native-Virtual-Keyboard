@@ -40,9 +40,8 @@ module.exports = StyleSheet.create({
     paddingTop: 16,
     overflow: "hidden",
     backgroundColor: "#ffffff",
-
     shadowColor: "#bfbfbf",
-    shadowOpacity: 0.1,
+    shadowOpacity: 0.2,
     shadowRadius: 2,
     shadowOffset: {
       height: -2,
@@ -54,10 +53,10 @@ module.exports = StyleSheet.create({
   headerContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingHorizontal: 8,
-    paddingBottom: 12
+    paddingHorizontal: 16,
+    paddingBottom: 8
   },
-  label: { fontSize: 12, color: "#a0a5ab" },
+  label: { fontSize: 11, color: "#a0a5ab" },
   button: { color: "#686d75" },
   mask: {
     flex: 1,
